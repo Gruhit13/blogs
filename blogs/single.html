@@ -6,12 +6,15 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Single - Monica</title>
+    <title>Single - Gruhit</title>
 
     <script>
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
     </script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <!-- CSS
     ================================================== -->
@@ -51,7 +54,7 @@
 
             <div class="row s-header__inner width-sixteen-col">
 
-                <div class="s-header__block">
+                <!-- <div class="s-header__block">
                     <div class="s-header__logo">
                         <a class="logo" href="index.html">
                             <img src="images/logo.svg" alt="Homepage">
@@ -59,14 +62,16 @@
                     </div>
 
                     <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-                </div> <!-- end s-header__block -->
+                </div> --> 
+                <!-- end s-header__block -->
 
                 <nav class="s-header__nav">    
                     <ul class="s-header__menu-links">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li class="current"><a href="blog.html">Journal</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../index.html">Gruhit</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li class="current"><a href="../blog.html">Journal</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
                     </ul> <!-- s-header__menu-links -->
 
                     <div class="s-header__contact">
@@ -133,107 +138,330 @@
                     <div class="column xl-12"> 
 
                             <p class="lead">
-                            Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
-                            sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
-                            enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
-                            magna amet magna cupidatat qui labore cillum cillum cupidatat fugiat nostrud. </p> 
+                            If you have started machine learning and performed a classification project then you would 
+                            have surely come across these words quite often and if you are like me that you would have 
+                            mugged up the formula for it as well. And looking at the extreme importance of these two 
+                            terms it seems even reasonable to mug up the formula along with briefly understanding 
+                            what it actually means. </p> 
 
                             <p class="drop-cap">
-                            Eligendi quam at quis. Sit vel neque quam consequuntur expedita quisquam. Incidunt quae 
-                            qui error. Rerum non facere mollitia ut magnam laboriosam. Quisquam neque quia ex eligendi 
-                            repellat illum quibusdam aut. Architecto quam consequuntur totam ratione reprehenderit est 
-                            praesentium impedit maiores incididunt adipisicing veniam velit .
+                            Precision and Recall are those two metrics in machine learning that is used to evaluate how 
+                            well the model is able to remember the dataset along with how well it has understood it. 
+                            Precision is responsible for accounting the understanding of dataset part whereas recall 
+                            is responsible for evaluating the remembering part. 
                             </p>
     
                             <p>
-                            Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
-                            sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
-                            enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
-                            magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum 
-                            adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut 
-                            laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat 
-                            in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
+                            In my initial days of learning machine learning (Yeah that’s how I say that I am still learning 
+                            the domain of machine learning by putting machine patties between 2 slices of learning, resulting 
+                            in ‘learning machine learning’), I was so fascinated on how my program was able to classify between 
+                            any digit from 0-9. And that was even the point where I first met these two friends of mine called 
+                            Precision and Recall. Precision and Recall are less sung heroes of machine learning. They are 
+                            crucial but merely a few machine-learning learners know what it actually says. But guess what you 
+                            will get to know today what it actually means. And that is really fantastic!!!!
                             </p>
-            
-                            <figure class="alignwide">
-                                <img src="images/sample-1200.jpg" 
-                                     srcset="images/sample-2400.jpg 2400w, 
-                                             images/sample-1200.jpg 1200w, 
-                                             images/sample-600.jpg 600w" sizes="(max-width: 2400px) 100vw, 2400px" alt="">
-                            </figure>
     
                             <p>
-                            Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
-                            sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
-                            enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
-                            magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum 
-                            adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut 
-                            laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat 
-                            in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
+                            In order to know what precision and recall is you need to know what the confusion matrix is and in 
+                            order to know that you need to know why we need it. So we will break our this session in 2 Parts:
+                            <ol>
+                                <li>Exploring confusion matrix.(The backend of Precision and Recall)</li>
+                                <li>Understanding Precision and Recall.</li>
+                            </ol>
+
                             </p>
     
-                            <h2>Large Heading</h2>
+                            <h2>What is Confusion Matrix?🤔</h2>
         
                             <p>
-                            Harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta 
-                            nobis est eligendi optio cumque nihil impedit quo minus <a href="http://#">omnis voluptas assumenda est</a> 
-                            id quod maxime placeat facere possimus, omnis dolor repellendus. Temporibus autem quibusdam et 
-                            aut officiis debitis aut rerum necessitatibus saepe eveniet ut et.</p>
+                            Theoretically a confusion matrix is like a report card of the model that basically tells you how 
+                            well the model was on classifying the labels and how often it made mistake(s). Technically speaking, 
+                            confusion is a matrix displaying the count of a model's correct and incorrect prediction of classes. </p>
     
                             <blockquote>
                                 <p>
-                                For God so loved the world, that he gave his only Son, that whoever believes in 
-                                him should not perish but have eternal life. For God did not send his Son into 
-                                the world to condemn the world, but in order that the world might be 
-                                saved through him.
+                                It is difficult to think of a major industry that AI will not transform. This includes healthcare,
+                                education, transportation, retail, communications, and agriculture. There are suprisingly clear paths
+                                for AI to make a big difference in all of these industries.
                                 </p>
-                                <cite>John 3:16-17 ESV</cite>
+                                <cite>Andrew Ng</cite>
                             </blockquote>
     
-                            <p>
-                            Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores 
-                            et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. 
-                            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit 
-                            libero, a pharetra augue laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat 
-                            occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed..</p>
-    
-                            <h3>Smaller Heading</h3>
+                            <h3>How can I get a confusion matrix? 😕</h3>
     
                             <p>
-                            Quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
-                            eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
-                            assumenda est, omnis dolor repellendus.
+                            For this, let's assume that you have trained a model for a binary classification task where a sample 
+                            data-point has a certain probability of falling in 1 of 2 classes. For that model, you provide it validation 
+                            or testing dataset and retrieve the output for each of the points in the validation dataset. Now you compare 
+                            the response from the model with the true value(in ML terminology we call true or actual value as ‘Ground Truth’, 
+                            it seems more fancy and showcases that you know machine learning). For a binary classification task there can 
+                            be 4 possible outcomes when you compare the model's prediction with the ground truth values (never leave a chance 
+                            to show off!). A representation of those 4 possible values is what a confusion matrix is.
                             </p>
-    
+
                             <p>
-                            Quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
-                            eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
-                            assumenda est, omnis dolor repellendus.
+                                You would have obvisouly seen confusion matrix a lot of time so let me represent it in a way that would make more sense.
+                                Take a look at this representation of confusion matrix 👇
+                            </p>
+
+                            <figure class="alignwide">
+                                <img src="../images/Blog1/confusion_matrix.png" 
+                                     srcset="../images/Blog1/confusion_matrix.png" sizes="(max-width: 2400px) 100vw, 2400px" alt="">
+                            </figure>
+                            <p>
+                            <b>Example:</b> Here we will create a model that takes an image as input and predict if it is a dog or cat. So for a certain 
+                            set of images that model will tell us which of the models it thinks is a cat and which is a dog.
                             </p>
                                     
                             <p>
-                            Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et 
-                            quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.</p>
-    
-                            <ul>
-                                <li>Donec nulla non metus auctor fringilla.
-                                    <ul>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                    </ul>
-                                </li>
-                                <li>Donec nulla non metus auctor fringilla.</li>
-                                <li>Donec nulla non metus auctor fringilla.</li>
-                            </ul>
+                            Note: It is not necessary that the model correctly predicts each image and hence to identify the model's interpretation 
+                            for cat and dog we have this confusion matrix.
+                            </p>
     
                             <p>
-                            Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas 
-                            molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. Aenean eu leo quam. 
-                            Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue 
-                            laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing 
-                            in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-                            </p>        
+                            Here the person with a green T-shirt is our model whereas the other character is our ground truth. The model provides its 
+                            opinion to which the ground truth reveals the truth. Now each of the 4 cases has its corresponding case and that is what 
+                            confuses most of the people so in order to simplify its nomenclature (a system of naming, told ya! I do not leave a chance to show off) 
+                            we will break the case name in 2 words.
+                            </p>
+
+                            <p>
+                            <b>Word 1)</b> Says whether the model’s prediction is correct (True) or incorrect (False)
+                            </p>
+
+                            <p>
+                            <b>Word 2)</b> Says the model’s prediction about a data point being of category 1 (Positive/Cat) or category 2 (Negative/Dog).
+                            </p>
+                            
+                            <p>
+                            Here, instead of Dog/Cat there can be any pair of categories (Malignant/Benign, Churn/Not Churn, etc)  and hence in general we 
+                            split the categories usually as Positive and Negative. Taking a category name as Negative does not mean that model is doing 
+                            something wrong; it's just a general name provided to the category. And hence based on the category name we have labels as 
+                            Positive and Negative.
+                            </p>
+
+                            <ol>
+                                <!--  True Positive  -->
+                                <b><li>True Positive (TP)</li></b>
+                                <ul>
+                                    <li>
+                                    This case arrives when the model correctly predicts the true category. What I mean is the image provided to the model 
+                                    was of cat and the model correctly identifies it as cat. So the model's prediction for that image is cat which is right 
+                                    or in machine learning terms it is true.
+                                    </li>
+                                    <li>
+                                    As it correctly or <b>truely predicted</b> a data point of the <b>Positive category</b> we call this case as <b><u>True Positive.</u></b> 
+                                    Stating that the model has truly predicted the Positive category’s data point.
+                                    </li>
+                                </ul>
+
+                                <!--  False Negative  -->
+                                <b><li>False Negative (FN)</li></b>
+                                <ul>
+                                    <li>
+                                    This scenario will occur when the model was given a cat image but the model predicted it as a dog which is wrong(False). 
+                                    As the model is <b>falsely stating</b> that the image is of dog which is <b>Negative Category</b> whereas actually, the 
+                                    image is of cat we call this case as <b><u>False Negative</u></b>.
+                                    </li>
+                                    <li>
+                                    False negative means originally the data-point(Image in our case) belonged to the Positive class(Cat class in our project) but the 
+                                    model falsely predicted it as Negative Class. Hence it is called False Negative.
+                                    </li>
+                                </ul>
+                                
+                                <!--  False Positive  -->
+                                <b><li>False Positive (FP)</li></b>
+                                <ul>
+                                    <li>
+                                    This case is similar to False Negative. Based on the name you would have obviously guessed what it means but 
+                                    still let me do my work(I ain’t lazy!!!!).
+                                    </li>
+                                    <li>
+                                    This case occurs when the model is actually given a dog’s image as input but it predicts it as cat. As the model <b>falsely 
+                                    predicts</b> that the data point belongs to the Cat class which is which is the <b>Positive class</b>, this case is called 
+                                    <b><u>False Positive</u></b>.
+                                    </li>
+                                </ul>
+
+                                <!--  True Negative  -->
+                                <b><li>True Negative (TN)</li></b>
+                                <ul>
+                                    <li>
+                                    I know you would have probably guessed it and yeah you are right(Only if you have guessed it in the first place). 
+                                    </li>
+                                    <li>
+                                    This case occurs when the model is given an image of a dog and it correctly identifies it as being a dog. As the model <b>truly 
+                                    identifies</b> a data point of <b>negative class</b> (dog class in our project) this case is called <b><u>True Negative</u></b>.
+                                    </li>
+                                </ul>
+                            </ol>
+
+                            <p>
+                            NOTE: There is no mandate that the 1st category must always be positive and 2nd category must be positive, this is mainly done for 
+                            simplicity and basically the first person who made the confusion matrix decided to make it that way so it's like this. 
+                            </p>
+
+                            <p>
+                            If you are willing to pursue your career in the machine learning domain then you will end up seeing many variations to this simple 
+                            confusion matrix where the labels start from negative and then we have positive and so on. But that would be just a trick of your 
+                            professor to make the question look tough. So do not get scared by it and remember my above given words of wisdom. 😉😇
+                            </p>
+
+                            <p>
+                            These 4 cases might seem a mathematical combination of possible values but it actually means a lot. As it says, the model 
+                            understanding of the data. This report card of the model further assists us in making decisions on what changes to make to improvise 
+                            model performance. But for any machine learning task we want the model to correctly identify all the data points of their respective 
+                            category i.e. we want the model to increase the values of True Positives and True Negatives whereas reduce the False Negative and False Positive.
+                            </p>
+
+                            <p>
+                            And here you are knowing all the black and white of confusion matrix so now let’s move further to knowing our friends precision 
+                            and recall but before that quick revision.
+                            </p>
+
+                            <p>
+                            Confusion matrix: A report card stating the model's understanding about the pattern it captured from the training data.
+                            <br>
+
+                            Ground truth: The true value that is associated with the data point that the model is expected to predict. 
+                            <br>
+
+                            TP: Model says Cat, actually it was cat!!!.
+                            <br>
+
+                            FN: Model says Dog, actually it was cat.
+                            <br>
+
+                            FP: Model says Cat, actually it was a dog, Duh!!
+                            <br>
+
+                            TN: Model says Dog, actually it was dog.
+                            </p>
+
+                            <p>Okay, now it's time to march forward for precision and recall.</p>
+                            
+                            <h3>Precision 🎯</h3>
+
+                            <p>
+                            The formula that you would have known about precision goes like this:
+                            </p>
+                            <p>
+                            $$ Precision = \frac{TP}{TP + FP} $$
+                            </p>
+
+                            <p>
+                            If I had to say it to you verbally then I would say 
+                            “Precision is the true positive divided by the sum of all the labels that the model predicted to be positive”. 
+                            Now if you see I said “all the labels model predicted to be positive” so by all the labels I mean that the model 
+                            has predicted certain labels as positive which were positive but in addition to that the model even predicted certain 
+                            labels as positive which were not positive but here we will consider that as well.                                
+                            </p>
+
+                            <p>
+                            Mathematically, equating:
+                            <br>
+                            Total Positive according to Model = Truly identified positive labels + Falsely stated positive labels
+                            </p>
+
+                            <p>
+                            A ratio of True positive over total positive according to the model will tell you that out of all the positive 
+                            labels predicted by the model how many are actually true.
+                            </p>
+
+                            <p>
+                            Let us take an example to understand this thing. Let’s say we have 10 apples out of which 5 are green and 5 are red. 
+                            We want the model to correctly identify them but if a human can make a mistake so can the human made ML model and hence 
+                            it makes a mistake which is displayed in our confusion matrix.
+                            </p>
+
+                            <figure class="alignwide">
+                                <img src="../images/Blog1/ConfMat2.png" 
+                                     srcset="../images/Blog1/ConfMat2.png" sizes="(max-width: 2400px) 100vw, 2400px" alt="">
+                            </figure>
+                            
+                            <p>
+                            So from this matrix, if we have to calculate the total number of positive(green) apples predicted by the 
+                            model then that will be this portion of the matrix
+                            </p>
+
+                            <figure class="alignwide">
+                                <img src="../images/Blog1/TotalPredPos.png" 
+                                     srcset="../images/Blog1/TotalPredPos.png" sizes="(max-width: 2400px) 100vw, 2400px" alt="">
+                            </figure>
+                            
+                            <p>
+                            Thus the total positive according to the model is 5 out of which 3 are truly green apples and 2 apples were misclassified 
+                            by the model as being green despite being red. Thus based on our formula
+                            </p>
+
+                            <p>
+                            $$ Total \ true \  predicted \  by  \ model = 3 + 2 = 5 $$
+                            </p>
+
+                            <p>
+                            Thus we calculate precision as <br>
+                            $$ Precision = \frac{3}{5} = 0.6 $$
+                            </p>
+
+                            <p>
+                            Here the model’s precision is 0.6. Now what does this tell us? This basically tells us that out of all the apples that the 
+                            model predicted to be positive only 60%  are positive so this says the model’s capability in identifying green apples.
+                            </p>
+
+                            <p>
+                            This metric says how well the model is in identifying a category truly. Thus this metric emphasises on the model’s capability 
+                            to correctly classify a label. On a general note, precision says that out of all the labels that the model thinks to be of category 
+                            1 how many actually are of category 1? If all of the model’s predicted category 1 labels are actually of category 1 then the model 
+                            has understood the features of categories 1 and 2.
+                            </p>
+
+                            <h3>Recall 💡</h3>
+
+                            <p>
+                            The formula for recall that we know is <br>
+                            $$ recall = \frac{TP}{TP + FN} $$
+                            </p>
+
+                            <p>
+                            Over here the denominator is the sum of all the true values that within the dataset i.e in the given dataset how many labels are 
+                            actually positive or true. And that value is obtained by summing the labels that the model truly identified as being true and those 
+                            labels that the model falsely identified as negative because those labels were also actually true. Thus over here the denominator 
+                            is the total number of sample in the dataset that belonged to Green Apple (class 1, class Positives, etc).
+                            </p>
+
+                            <p>
+                            $$ total \ Positives \ in \ the \ dataset = Truly \ identified \ positive \ labels + Falsely \ stated \ Negative \ labels $$
+                            </p>
+
+                            <figure class="alignwide">
+                                <img src="../images/Blog1/TotalTruePos.png" 
+                                     srcset="../images/Blog1/TotalTruePos.png" sizes="(max-width: 2400px) 100vw, 2400px" alt="">
+                            </figure>
+
+                            <p>
+                            The ratio of True positive over all the labels that are actually true in our dataset is what recall is and 
+                            this case we can calculate recall as <br>
+                            $$ recall =  \frac{3}{5} = 0.6 $$
+                            </p>
+
+                            <p>
+                            Recall says that out of all the labels that were true in the dataset the model was able to recall its learning 
+                            from the training dataset and predict 60% of labels as true correctly.
+                            </p>
+
+                            <p>
+                            Thus recall says how well the model is able to remember the knowledge it acquired from the training dataset 
+                            and use it to identify the unseen dataset. Recall in general says that out of all the labels of category 1 
+                            in the dataset how many the model was able to identify successfully? So out of all the green apples that we had, 
+                            how many of them does the model predict to be green?
+                            </p>
+                            
+                            <h3>Conclusion</h3>
+                            <p>
+                            This was the essence behind the precision and recall. Thus precision and recall being so simple is yet a crucial 
+                            aspect in machine learning as it tends to say a lot. As a form of exercise try thinking of scenarios of what a 
+                            high precision would mean and what a high recall would mean.
+                            </p>    
 
                             <div class="post-nav">
                                 <div class="post-nav__prev">
@@ -335,7 +563,7 @@
         <footer class="s-footer">
             <div class="row s-footer__content">
                 <div class="column xl-6 lg-6 md-12 s-footer__block s-footer__about">                    
-                    <h3>About Monica</h3>
+                    <h3>About Gruhit</h3>
                     <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illum quasi facere libero, 
                     fugiat laboriosam possimus reprehenderit eveniet vero voluptatum fugit ad quis veritatis suscipit beatae 
@@ -403,7 +631,7 @@
                 </div>
                 <div class="column xl-6 lg-12">
                     <p class="ss-copyright">
-                        <span>© Copyright Monica 2022</span> 
+                        <span>© Copyright Gruhit 2022</span> 
                         <span>Design by <a href="https://www.styleshout.com/">StyleShout</a> Distribution By <a href="https://themewagon.com">ThemeWagon</a></span>
                     </p>
                 </div>
